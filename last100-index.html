@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Last 100 Words — Lost Worlds Institute</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="grain"></div>
+
+  <!-- INTRO SCREEN -->
+  <div id="intro">
+    <div id="intro-inner">
+      <p class="org-name">Lost Worlds Institute</p>
+      <h1>The Last<br/><em>100 Words</em></h1>
+      <p class="intro-sub">When a language dies, linguists race to preserve what they can.<br/>This is what survives.</p>
+      <p class="intro-note">Of an estimated 40,000–80,000 words in a living language,<br/>sometimes only a few hundred are ever recorded.</p>
+      <button id="enter-btn" onclick="enterSite()">Enter the archive ↓</button>
+    </div>
+  </div>
+
+  <!-- MAIN SITE -->
+  <div id="app" class="hidden">
+
+    <!-- Header -->
+    <header id="site-header">
+      <div class="header-left">
+        <span class="site-org">Lost Worlds Institute</span>
+        <span class="site-title">The Last 100 Words</span>
+      </div>
+      <div class="header-right">
+        <div id="legend">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </header>
+
+    <!-- Language Nav -->
+    <nav id="lang-nav">
+      <!-- populated by JS -->
+    </nav>
+
+    <!-- Counter bar -->
+    <div id="counter-bar">
+      <div id="counter-inner">
+        <span id="counter-lang-name">—</span>
+        <span id="counter-text"></span>
+      </div>
+    </div>
+
+    <!-- Constellation canvas -->
+    <div id="stage">
+      <canvas id="bg-canvas"></canvas>
+      <div id="word-field">
+        <!-- words injected here -->
+      </div>
+    </div>
+
+    <!-- Word detail panel -->
+    <div id="detail-panel" class="panel-hidden">
+      <button id="close-panel" onclick="closePanel()">✕</button>
+      <div id="panel-category-dot"></div>
+      <div id="panel-category"></div>
+      <div id="panel-word"></div>
+      <div id="panel-pronunciation"></div>
+      <div id="panel-meaning"></div>
+      <div id="panel-note"></div>
+      <div id="panel-why"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <span>Data compiled by LWI researchers from published linguistic field records. Some reconstructions are approximate.</span>
+    </footer>
+
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
